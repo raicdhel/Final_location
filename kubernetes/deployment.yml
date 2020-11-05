@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: location
-          image: username/location:latest
+          image: admin32.azurecr.io/location:latest
           ports:
             - containerPort: 8080
           readinessProbe:
