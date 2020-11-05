@@ -27,7 +27,7 @@ public class PolicyHandler{
             location.setNowStatus(delivered.getDeliveryStatus());
 
             if(delivered.getDeliveryStatus().equals("Delivered")) {
-                location.setDesc("Your Pizza is 800m left !!!");
+                location.setDesc("Your Pizza arrived !!!");
             } else {
                 location.setDesc("Order and Delivery is " + delivered.getDeliveryStatus());
             }
