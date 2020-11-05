@@ -1,33 +1,11 @@
 package pizza;
 
-import javax.persistence.*;
-import org.springframework.beans.BeanUtils;
-import java.util.List;
+public class LocationSaved extends AbstractEvent {
 
-@Entity
-@Table(name="Location_table")
-public class Location {
-
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     private Long orderId;
     private String nowStatus;
     private String desc;
-
-    @PostPersist
-    public void onPostPersist(){
-        LocationSaved locationSaved = new LocationSaved();
-        BeanUtils.copyProperties(this, locationSaved);
-        locationSaved.publishAfterCommit();
-
-        try {
-            Thread.sleep((long) (400 + Math.random() * 300));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
 
     public Long getId() {
         return id;
@@ -57,8 +35,4 @@ public class Location {
     public void setDesc(String desc) {
         this.desc = desc;
     }
-
-
-
-
 }

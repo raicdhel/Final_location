@@ -19,44 +19,6 @@ public class PolicyHandler{
     LocationRepository locationRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
-    public void wheneverOrdered_ChangeStatus(@Payload Ordered ordered){
-
-        if(ordered.isMe()){
-            Location location = new Location();
-            location.setOrderId(ordered.getId());
-            location.setNowStatus(ordered.getOrderStatus());
-
-            if(ordered.getOrderStatus().equals("Ordered")) {
-                location.setDesc(ordered.getPizzaId() + " Pizza " + ordered.getQty() + "ea ordered !!!");
-            } else {
-                location.setDesc("Your Order is " + ordered.getOrderStatus());
-            }
-
-            locationRepository.save(location);
-
-            System.out.println("##### listener ChangeStatus : " + ordered.toJson());
-        }
-    }
-    @StreamListener(KafkaProcessor.INPUT)
-    public void wheneverPaid_ChangeStatus(@Payload Paid paid){
-
-        if(paid.isMe()){
-            Location location = new Location();
-            location.setOrderId(paid.getOrderId());
-            location.setNowStatus(paid.getPaymentStatus());
-
-            if(paid.getPaymentStatus().equals("Paid")) {
-                location.setDesc("Your credits card was paid 10,000 won !!!");
-            } else {
-                location.setDesc("Your Payment is " + paid.getPaymentStatus());
-            }
-
-            locationRepository.save(location);
-
-            System.out.println("##### listener ChangeStatus : " + paid.toJson());
-        }
-    }
-    @StreamListener(KafkaProcessor.INPUT)
     public void wheneverDelivered_ChangeStatus(@Payload Delivered delivered){
 
         if(delivered.isMe()){

@@ -1,0 +1,11 @@
+pizza\LocationApplication.class
+pizza\AbstractEvent$1.class
+pizza\LocationRepository.class
+pizza\LocationController.class
+pizza\PolicyHandler.class
+pizza\config\kafka\KafkaProcessor.class
+pizza\Paid.class
+pizza\Delivered.class
+pizza\Location.class
+pizza\AbstractEvent.class
+pizza\LocationSaved.class

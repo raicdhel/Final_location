@@ -1,11 +1,10 @@
-C:\Azure\pizza\location\src\main\java\pizza\Ordered.java
 C:\Azure\pizza\location\src\main\java\pizza\Delivered.java
 C:\Azure\pizza\location\src\main\java\pizza\Location.java
 C:\Azure\pizza\location\src\main\java\pizza\AbstractEvent.java
 C:\Azure\pizza\location\src\main\java\pizza\config\kafka\KafkaProcessor.java
-C:\Azure\pizza\location\src\main\java\pizza\StatusSaved.java
 C:\Azure\pizza\location\src\main\java\pizza\LocationApplication.java
 C:\Azure\pizza\location\src\main\java\pizza\LocationRepository.java
 C:\Azure\pizza\location\src\main\java\pizza\LocationController.java
+C:\Azure\pizza\location\src\main\java\pizza\LocationSaved.java
 C:\Azure\pizza\location\src\main\java\pizza\Paid.java
 C:\Azure\pizza\location\src\main\java\pizza\PolicyHandler.java
