@@ -69,4 +69,4 @@ feign:
 hystrix:
   command:
     default:
-      execution.isolation.thread.timeoutInMilliseconds: 680
+      execution.isolation.thread.timeoutInMilliseconds: 500
