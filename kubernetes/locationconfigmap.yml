@@ -1,8 +1,17 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: locationconfigmap
+  name: location
 data:
-  TEXT1: Customer1_Company
-  TEXT2: Welcomes You
-  COMPANY: Customer1 Company Technology Pct. Ltd.
+  url:  http://location:8088
+  fluentd-sever-ip: 10.0.22.192/locations
+
+
+#apiVersion: v1
+#kind: ConfigMap
+#metadata:
+#  name: customer1
+#data:
+#  TEXT1: Customer1_Company
+#  TEXT2: Welcomes You
+#  COMPANY: Customer1 Company Technology Pct. Ltd.
