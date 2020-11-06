@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: location
+data:
+  url:  http://location:8088
+  fluentd-sever-ip: 10.0.22.192
