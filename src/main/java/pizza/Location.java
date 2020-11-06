@@ -29,7 +29,7 @@ public class Location {
         }
 */
 
-        System.out.println("================ time ===============");
+        System.out.println("================ time =============");
     }
 
 
