@@ -26,6 +26,8 @@ public class Location {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        System.out.println("================ time ===============");
     }
 
 

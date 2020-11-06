@@ -5,6 +5,11 @@ metadata:
   labels:
     app: location
 spec:
+  resources:
+    limits:
+      cpu: 500m
+    requests:
+      cpu: 200m
   replicas: 1
   selector:
     matchLabels:
