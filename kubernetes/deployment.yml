@@ -24,12 +24,6 @@ spec:
               cpu: 200m
           ports:
             - containerPort: 8080
-          env:
-            - name: LANGUAGE
-              valueFrom:
-                configMapKeyRef:
-                  name: hello-cm
-                  key: language
           readinessProbe:
             httpGet:
               path: '/actuator/health'
@@ -39,10 +33,18 @@ spec:
             periodSeconds: 5
             failureThreshold: 10
           livenessProbe:
-            httpGet:
-              path: '/actuator/health'
-              port: 8080
+#            httpGet:
+#              path: '/actuator/health'
+#              port: 8080
+            tcpSocket:
+              port: 8081
             initialDelaySeconds: 120
             timeoutSeconds: 2
             periodSeconds: 5
             failureThreshold: 5
+#          env:
+#            - name: LANGUAGE
+#              valueFrom:
+#                configMapKeyRef:
+#                  name: hello-cm
+#                  key: language
