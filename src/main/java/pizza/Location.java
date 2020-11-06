@@ -23,7 +23,7 @@ public class Location {
 
 
         try {
-            Thread.sleep((long) (400 + Math.random() * 300));
+            Thread.sleep((long) (200 + Math.random() * 300));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
