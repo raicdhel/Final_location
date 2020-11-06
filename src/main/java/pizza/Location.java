@@ -21,13 +21,13 @@ public class Location {
         BeanUtils.copyProperties(this, locationSaved);
         locationSaved.publishAfterCommit();
 
-/*
+
         try {
             Thread.sleep((long) (400 + Math.random() * 300));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-*/
+
 
         System.out.println("================ time =============");
     }
