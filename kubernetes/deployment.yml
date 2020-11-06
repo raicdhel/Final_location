@@ -42,9 +42,9 @@ spec:
             timeoutSeconds: 2
             periodSeconds: 5
             failureThreshold: 5
-#          env:
-#            - name: LANGUAGE
-#              valueFrom:
-#                configMapKeyRef:
-#                  name: locationconfigmap
-#                  key: fluentd-server-ip
+          env:
+            - name: FINAL
+              valueFrom:
+                configMapKeyRef:
+                  name: locationconfigmap
+                  key: language
