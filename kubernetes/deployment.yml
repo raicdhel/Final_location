@@ -14,14 +14,14 @@ spec:
       labels:
         app: location
     spec:
-      resources:
-        limits:
-          cpu: 500m
-        requests:
-          cpu: 200m
       containers:
         - name: location
           image: admin32.azurecr.io/location:latest
+          resources:
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
           ports:
             - containerPort: 8080
           readinessProbe:
